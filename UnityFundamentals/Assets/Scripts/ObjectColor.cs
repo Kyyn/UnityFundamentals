@@ -23,11 +23,21 @@ public class ObjectColor : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.G))
         {
-            GetComponent<Renderer>().material.color = changedColor;
+            EnableColor();
         }
         else if (Input.GetKeyUp(KeyCode.G))
         {
-            GetComponent<Renderer>().material.color = originalColor;
+            DisableColor();
         }
 	}
+
+    public void EnableColor()
+    {
+        GetComponent<Renderer>().material.color = changedColor;
+    }
+
+    public void DisableColor()
+    {
+        GetComponent<Renderer>().material.color = originalColor;
+    }
 }
