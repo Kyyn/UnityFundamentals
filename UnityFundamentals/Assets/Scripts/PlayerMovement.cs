@@ -26,19 +26,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void Movement()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.W))
         {
             Debug.Log("Key Up Arrow Pressed.");
 
             this.transform.Translate(new Vector3(0, 0, moveSpeed * Time.deltaTime));
         }
-        else if (Input.GetKey(KeyCode.DownArrow))
+        else if (Input.GetKey(KeyCode.S))
         {
             Debug.Log("Key Down Arrow Pressed.");
             this.transform.Translate(new Vector3(0, 0, -moveSpeed * Time.deltaTime));
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A))
         {
             if (canMoveSideways)
             {
@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
                 this.transform.Rotate(new Vector3(0, -rotateSpeed * Time.deltaTime, 0));
             }
         }
-        else if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.D))
         {
             if (canMoveSideways)
             {
@@ -71,13 +71,13 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.UpArrow))
         {
             Debug.Log("Key W Pressed.");
 
             this.transform.Translate(new Vector3(0, moveSpeed * Time.deltaTime, 0));
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.DownArrow))
         {
             Debug.Log("Key S Pressed.");
             this.transform.Translate(new Vector3(0, -moveSpeed * Time.deltaTime, 0));
